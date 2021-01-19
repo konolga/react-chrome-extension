@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Extension",
+  "name": "React Chrome Extension",
   "icons": [
     {
       "src": "favicon.ico",
@@ -12,14 +12,22 @@
       "type": "image/png",
       "sizes": "192x192"
     },
+
     {
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
+  "permissions": [],
+  "manifest_version": 2,
+  "version": "0.0.1",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "React Chrome Extension"
+  }
 }
