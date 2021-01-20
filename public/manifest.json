@@ -6,8 +6,7 @@
     "16": "logo192.png",
     "48": "logo512.png"
   },
-  "permissions": [],
-  "manifest_version": 2,
+  "manifest_version": 3,
   "version": "0.0.1",
 
   "browser_action": {
@@ -16,5 +15,10 @@
   },
   "chrome_url_overrides": {
     "newtab": "index.html"
-  }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["history", "activeTab", "storage"]
 }
