@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import fetchHistory from "../background";
+import { Switch, Router } from "react-router-dom";
 
 class HistoryComponent extends Component {
   constructor(props) {
@@ -9,32 +8,43 @@ class HistoryComponent extends Component {
   }
 
   componentDidMount() {
-    fetchHistory().then((data) => {
-      if (data.error) {
-        console.log(data.error);
-      } else {
-        this.setState({ urls: data });
-      }
-    });
+    let data = [];
+    if (chrome && chrome.history) {
+      //TODO: chrome history is always undefined here and in background.js
+      chrome.history.search({ text: "", maxResults: 5 }, (d) => {
+        data = d;
+      });
+    } else {
+      // dummy data to see how component renders
+      data.push("google.com", "stackoverflow.com", "medium.com");
+    }
+    this.setState({ urls: data });
   }
 
   renderUrls = (urls) => {
-    return (
-      <div className="row">
-        {urls.map((url) => {
-          return <Link to={`${url.link}`} className="btn"></Link>;
-        })}
-      </div>
-    );
+    return urls.map((url, index) => {
+      return (
+        <div className="row">
+          <a
+            href={`http://${url}`}
+            key={index}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {url}
+          </a>
+        </div>
+      );
+    });
   };
 
   render() {
     const { urls } = this.state;
     return (
-      <div className="container">
-        <h2 className="mt-5 mb-5">
-          {!urls.length ? "Loading..." : "Recent visited sites"}
-        </h2>
+      <div className="history-container">
+        <h4 className="history-container-header">
+          {!urls.length ? "Loading..." : "Recently visited sites:"}
+        </h4>
         {this.renderUrls(urls)}
       </div>
     );
