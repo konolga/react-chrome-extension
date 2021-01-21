@@ -3,6 +3,7 @@ import "./App.css";
 import QuickLinksComponent from "./quick-links/QuickLinksComponent";
 import History from "./history/HistoryComponent";
 import SearchBar from "./search/SearchBar";
+import Statistics from "./statistics/Statistics";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </header>
       <SearchBar></SearchBar>
       <History></History>
+      <Statistics></Statistics>
       <footer>
         <a
           href={`http://generator.lorem-ipsum.info/terms-and-conditions`}

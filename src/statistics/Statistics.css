@@ -1,0 +1,38 @@
+.statistics-container {
+    font-size: calc(10px + 2vmin);
+  }
+  
+  
+  .infected {
+    background-color: rgba(102, 179, 255, 0.5) !important;
+    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+  }
+  
+  .recovered {
+    background-color: #21abab !important;
+    border-bottom: 10px solid #107c82;
+  }
+  
+  .deaths {
+    background-color: rgba(237, 178, 178, 0.5) !important;
+    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+  }
+  
+.statistics-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.MuiGrid-container{
+  flex-wrap: unset !important;
+}
+.cards-content{
+  font-size: calc(10px + 1vmin);
+}
+.covid-img{
+  width: 20vh;
+  margin-top: 20px;
+}

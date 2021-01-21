@@ -4,6 +4,7 @@
   max-width: 300px;
   min-height: 300px;
   max-height: 300px;
+  color: #107c82;
 }
 
 .App-logo {
@@ -44,5 +45,6 @@
 
 footer{
   width: 100vw;
-  margin-top: 50vh;
+  position: fixed;
+  bottom: 1vh;
 }
