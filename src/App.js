@@ -13,6 +13,15 @@ function App() {
       </header>
       <SearchBar></SearchBar>
       <History></History>
+      <footer>
+        <a
+          href={`http://generator.lorem-ipsum.info/terms-and-conditions`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Terms and Conditions
+        </a>
+      </footer>
     </div>
   );
 }

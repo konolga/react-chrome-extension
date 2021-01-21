@@ -7,7 +7,7 @@ class QuickLinksComponent extends Component {
     let names = ["Gmail", "Youtube", "Yahoo"];
     return links.map((link, index) => {
       return (
-        <div className="column">
+        <div className="column" key={index}>
           <a
             href={`http://${link}`}
             key={index}

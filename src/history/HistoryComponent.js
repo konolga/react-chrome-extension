@@ -24,7 +24,7 @@ class HistoryComponent extends Component {
   renderUrls = (urls) => {
     return urls.map((url, index) => {
       return (
-        <div className="row">
+        <div className="row" key={index}>
           <a
             href={`http://${url}`}
             key={index}
