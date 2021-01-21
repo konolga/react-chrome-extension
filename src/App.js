@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./image/logo.svg";
 import "./App.css";
 import QuickLinksComponent from "./quick-links/QuickLinksComponent";
 import History from "./history/HistoryComponent";

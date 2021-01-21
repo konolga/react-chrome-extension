@@ -2,7 +2,6 @@ import React from "react";
 import { Card, CardContent, Grid } from "@material-ui/core";
 import "./Statistics.css";
 import CountUp from "react-countup";
-import cx from "classnames";
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
@@ -38,7 +37,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             sm={12}
             xs={12}
             component={Card}
-            className={cx(detail.style)}
+            className={detail.style}
             key={index}
           >
             <CardContent className="cards-content">
