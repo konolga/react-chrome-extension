@@ -22,7 +22,7 @@
   max-height: 25vh;
   width: 100vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -40,18 +40,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.history-container-header{
-  margin: 12px;
-}
-
-.history-container{
-  max-height: 25vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
 }

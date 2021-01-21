@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Router } from "react-router-dom";
+import "./HistoryComponent.css";
 
 class HistoryComponent extends Component {
   constructor(props) {
