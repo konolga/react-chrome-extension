@@ -9,14 +9,13 @@ class HistoryComponent extends Component {
 
   componentDidMount() {
     let data = [];
+    // dummy data to see how component renders
+    data.push("google.com", "stackoverflow.com", "medium.com");
     if (chrome && chrome.history) {
-      //TODO: chrome history is always undefined here and in background.js
+      //TODO: chrome history is always undefined here and in background.js (now )
       chrome.history.search({ text: "", maxResults: 5 }, (d) => {
         data = d;
       });
-    } else {
-      // dummy data to see how component renders
-      data.push("google.com", "stackoverflow.com", "medium.com");
     }
     this.setState({ urls: data });
   }
